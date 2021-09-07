@@ -1,0 +1,37 @@
+variable env{
+description = "dev or prod"
+}
+
+variable rg{
+description = "the resource group name"
+default = "myrg"
+}
+
+variable asp{
+description = "appservice plan name"
+default = "kayus-aps"
+}
+
+variable asn{
+description = "appservice name"
+default = "kayus-asn"
+}
+
+variable location{
+description = "the location of the appservice"
+type = map
+default = {
+		"dev" = "eastus"
+		"prod" = "westus"
+}
+}
+
+variable envsuffix{
+description = "the suffix added to the environment name"
+type = map
+default = {
+		"dev" = "dev"
+		"prod" = "prod"
+}
+}
+
